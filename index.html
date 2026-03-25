@@ -1,44 +1,390 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Privacy Policy - Secret Folder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy / Política de Privacidad - Secret Folder</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        h1, h2 {
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
             color: #111;
         }
+
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        p, li {
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        select {
+            padding: 10px 14px;
+            margin-bottom: 30px;
+            font-size: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background: #fff;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 24px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p, li {
+                font-size: 15px;
+            }
+        }
     </style>
+
+    <script>
+        function changeLang() {
+            const lang = document.getElementById("lang").value;
+            document.querySelectorAll(".section").forEach(el => el.classList.remove("active"));
+            document.getElementById(lang).classList.add("active");
+        }
+    </script>
 </head>
 <body>
 
-<h1>Privacy Policy</h1>
+<div class="container">
+    <h1>Privacy Policy / Política de Privacidad</h1>
 
-<p>Secret Folder is designed to protect your privacy. We do not collect, store, or share personal data.</p>
+    <select id="lang" onchange="changeLang()">
+        <option value="es">🇪🇸 Español</option>
+        <option value="en">🇺🇸 English</option>
+    </select>
 
-<h2>Data Collection</h2>
-<p>The application does not collect personal information, photos, videos, or files. All protected content remains stored locally on your device.</p>
+    <!-- ===================== ESPAÑOL ===================== -->
+    <div id="es" class="section active">
+        <h2>1. Alcance general</h2>
+        <p>Esta Política de Privacidad describe cómo la Aplicación trata determinada información en relación con su funcionamiento, seguridad, integridad operativa y control del servicio.</p>
+        <p>La Aplicación ha sido diseñada para priorizar la privacidad del usuario y el control local de sus archivos y contenido, dentro de los límites técnicos, operativos y funcionales propios de la misma.</p>
 
-<h2>Limited Technical Data</h2>
-<p>The app may store a unique installation identifier, license status, and basic usage events (such as app opens) for functionality and license validation purposes. This data does not identify you personally.</p>
+        <h2>2. Contenido del usuario y almacenamiento local</h2>
+        <p>Los archivos, datos, contenidos y materiales gestionados mediante la Aplicación se almacenan localmente en el dispositivo del usuario, salvo que el propio usuario decida moverlos, exportarlos, copiarlos, transferirlos o compartirlos fuera del entorno de la Aplicación.</p>
+        <p>La Aplicación puede ofrecer funciones que permitan al usuario, entre otras acciones:</p>
+        <ul>
+            <li>almacenar archivos dentro de la Aplicación,</li>
+            <li>mover archivos hacia dentro o fuera de la Aplicación,</li>
+            <li>exportar o copiar archivos a otras ubicaciones del dispositivo,</li>
+            <li>importar archivos desde fuentes externas,</li>
+            <li>transferir archivos a otros sistemas, aplicaciones, carpetas, servicios o entornos accesibles desde el dispositivo.</li>
+        </ul>
+        <p>El usuario es el único y exclusivo responsable de cualquier acción de movimiento, copia, exportación, transferencia, duplicación, sustitución, sobrescritura, eliminación o compartición de archivos realizada mediante o a través de la Aplicación.</p>
+        <p>Una vez que un archivo, contenido o dato es exportado, copiado, transferido, movido o compartido fuera del entorno interno de la Aplicación, la Aplicación puede dejar de tener control, protección, aislamiento, ocultamiento o gestión sobre dicho contenido, dependiendo del destino, sistema, entorno o mecanismo utilizado por el usuario.</p>
 
-<h2>Data Storage</h2>
-<p>All protected files remain on your device and are never uploaded to external servers.</p>
+        <h2>3. Datos técnicos, operativos y de cuenta</h2>
+        <p>La Aplicación y/o sus servicios, sistemas, componentes o infraestructuras asociadas pueden recopilar, generar, registrar, procesar, almacenar, utilizar, correlacionar, conservar o analizar determinados datos técnicos, operativos, de seguridad, de cuenta, licencia, suscripción, acceso, integridad o funcionalidad, en la medida en que ello sea necesario, conveniente o razonablemente útil para el funcionamiento de la Aplicación, la protección del servicio, la prevención de abusos, la prevención de fraude, la aplicación de limitaciones, el control de licencias, el diagnóstico técnico, la seguridad, el mantenimiento, el soporte, la auditoría interna, el cumplimiento operativo, la mejora del servicio o la protección del desarrollador.</p>
+        <p>Dichos datos pueden incluir, entre otros:</p>
+        <ul>
+            <li>dirección IP,</li>
+            <li>última dirección IP conocida,</li>
+            <li>identificadores técnicos o del dispositivo,</li>
+            <li>país o ubicación aproximada,</li>
+            <li>fecha de registro,</li>
+            <li>actividad de acceso,</li>
+            <li>estado de la cuenta,</li>
+            <li>eventos del sistema,</li>
+            <li>registros técnicos,</li>
+            <li>uso de funciones,</li>
+            <li>estado de licencia,</li>
+            <li>estado de suscripción,</li>
+            <li>información de validación,</li>
+            <li>así como otros metadatos operativos o de seguridad razonablemente relacionados con el funcionamiento de la Aplicación.</li>
+        </ul>
+        <p>Estos datos se utilizan exclusivamente para fines operativos, funcionales, de seguridad, control, validación, continuidad, defensa, mantenimiento y protección de la Aplicación y sus servicios relacionados.</p>
 
-<h2>Third-Party Services</h2>
-<p>The app does not use advertising networks and does not share data with third parties.</p>
+        <h2>4. Acceso al contenido, procesamiento local y vistas técnicas limitadas</h2>
+        <p>La Aplicación no está diseñada para que el desarrollador acceda de forma ordinaria, continua o generalizada al contenido privado almacenado por el usuario dentro del entorno interno de la Aplicación.</p>
+        <p>Sin perjuicio de ello, el usuario reconoce que determinadas operaciones locales realizadas por la propia Aplicación —como almacenamiento, cifrado, descifrado, ocultamiento, importación, exportación, copia, movimiento, visualización interna, indexación local, generación de miniaturas, previsualizaciones, validación funcional o eliminación— pueden implicar tratamiento técnico automatizado del contenido dentro del propio dispositivo del usuario, exclusivamente en la medida necesaria para la ejecución de las funciones ofrecidas.</p>
+        <p>Asimismo, el usuario reconoce y acepta que, en circunstancias limitadas, excepcionales y no rutinarias, determinadas representaciones parciales, técnicas o reducidas del contenido —incluyendo, entre otras, miniaturas, previsualizaciones, referencias visuales, metadatos asociados, estados de procesamiento o artefactos técnicos generados por el sistema— podrían llegar a ser accesibles, visibles o utilizables por el desarrollador o por sistemas asociados exclusivamente con fines de:</p>
+        <ul>
+            <li>seguridad,</li>
+            <li>diagnóstico,</li>
+            <li>validación técnica,</li>
+            <li>prevención de abuso o fraude,</li>
+            <li>verificación funcional,</li>
+            <li>pruebas internas,</li>
+            <li>depuración,</li>
+            <li>análisis de errores,</li>
+            <li>control de integridad,</li>
+            <li>mantenimiento,</li>
+            <li>soporte técnico,</li>
+            <li>o evaluación y desarrollo de funciones actuales o futuras.</li>
+        </ul>
+        <p>Dicho acceso, cuando exista, no implica monitoreo humano continuo, revisión editorial sistemática, explotación comercial del contenido ni una práctica ordinaria aplicada de forma generalizada a todos los usuarios.</p>
 
-<h2>Contact</h2>
-<p>If you have any questions, please contact the developer through the Google Play listing.</p>
+        <h2>5. Transmisión de datos</h2>
+        <p>La Aplicación no está destinada al almacenamiento remoto del contenido privado del usuario como parte ordinaria de su funcionamiento principal.</p>
+        <p>No obstante, determinados datos técnicos, operativos, de cuenta, validación, seguridad, licencia o suscripción pueden ser transmitidos, consultados, sincronizados, verificados o procesados cuando ello resulte necesario o útil para:</p>
+        <ul>
+            <li>validación de licencias,</li>
+            <li>control de suscripción,</li>
+            <li>protección contra abuso o fraude,</li>
+            <li>integridad del servicio,</li>
+            <li>verificación operativa,</li>
+            <li>soporte técnico,</li>
+            <li>mantenimiento,</li>
+            <li>seguridad,</li>
+            <li>funcionamiento de servicios asociados.</li>
+        </ul>
 
-<p>Last updated: 2026</p>
+        <h2>6. Interacción con terceros y sistemas externos</h2>
+        <p>La Aplicación no vende datos del usuario ni tiene como finalidad comercializar contenido privado.</p>
+        <p>Sin embargo, cuando el usuario exporta, mueve, copia, comparte, transfiere o pone a disposición archivos o datos hacia fuera de la Aplicación, dicho contenido puede pasar a quedar sujeto a:</p>
+        <ul>
+            <li>otras aplicaciones,</li>
+            <li>carpetas visibles del sistema,</li>
+            <li>almacenamiento compartido,</li>
+            <li>servicios de terceros,</li>
+            <li>servicios en la nube,</li>
+            <li>herramientas del sistema operativo,</li>
+            <li>gestores de archivos,</li>
+            <li>sistemas externos,</li>
+            <li>o cualquier otro entorno fuera del control de la Aplicación.</li>
+        </ul>
+        <p>En tales casos, el tratamiento, exposición, conservación, acceso, indexación, sincronización, análisis, copia o difusión de esos archivos o datos ya no dependerá exclusivamente de la Aplicación, sino también del entorno, sistema, aplicación o servicio de destino elegido o permitido por el usuario.</p>
+
+        <h2>7. Responsabilidad del usuario</h2>
+        <p>El usuario es el único responsable de:</p>
+        <ul>
+            <li>gestionar sus archivos,</li>
+            <li>comprender dónde se almacenan sus datos,</li>
+            <li>verificar si un archivo continúa protegido o no tras ser movido o exportado,</li>
+            <li>revisar los permisos, accesos o sincronizaciones del dispositivo,</li>
+            <li>mantener sus propias medidas de respaldo y seguridad,</li>
+            <li>y asumir las consecuencias derivadas de transferencias, copias, exportaciones o usos externos de sus contenidos.</li>
+        </ul>
+        <p>El desarrollador no asume responsabilidad por decisiones del usuario relacionadas con la ubicación, exposición, duplicación, sincronización, compartición o conservación de archivos fuera del entorno interno de la Aplicación.</p>
+
+        <h2>8. Seguridad y limitaciones técnicas</h2>
+        <p>Aunque la Aplicación puede implementar mecanismos de seguridad, cifrado, ocultamiento, validación, protección lógica u otras medidas técnicas, ningún sistema puede garantizar seguridad absoluta, invulnerabilidad total o protección perfecta frente a todos los escenarios posibles.</p>
+        <p>El usuario reconoce que sus datos o archivos pueden verse comprometidos, expuestos, duplicados, accesibles, recuperables o afectados, total o parcialmente, por causas que incluyan, entre otras:</p>
+        <ul>
+            <li>compromiso del dispositivo,</li>
+            <li>accesos no autorizados,</li>
+            <li>exportaciones o transferencias realizadas por el propio usuario,</li>
+            <li>errores de configuración,</li>
+            <li>fallos del sistema,</li>
+            <li>herramientas de terceros,</li>
+            <li>análisis forense,</li>
+            <li>servicios externos,</li>
+            <li>sincronización automática,</li>
+            <li>malware,</li>
+            <li>o circunstancias fuera del control razonable del desarrollador.</li>
+        </ul>
+
+        <h2>9. Conservación y eliminación</h2>
+        <p>La Aplicación puede conservar ciertos datos técnicos, operativos, de cuenta, licencia, seguridad o validación durante el tiempo razonablemente necesario para la operación del servicio, el control de integridad, la prevención de abuso, el soporte, la seguridad, la auditoría interna o la defensa del desarrollador.</p>
+        <p>La eliminación, desinstalación, exportación, copia, movimiento o supresión de archivos por parte del usuario no garantiza necesariamente la eliminación absoluta de rastros, copias, metadatos, registros del sistema, cachés, referencias, índices, respaldos externos o artefactos residuales generados por el dispositivo, el sistema operativo, terceros o entornos ajenos a la Aplicación.</p>
+
+        <h2>10. Modificaciones</h2>
+        <p>Esta Política de Privacidad podrá ser modificada, sustituida, actualizada, ampliada o corregida en cualquier momento.</p>
+        <p>La versión vigente será la aplicable desde el momento de su publicación o disponibilidad. El uso continuado de la Aplicación tras cualquier modificación constituirá aceptación de la versión actualizada.</p>
+
+        <h2>11. Contacto</h2>
+        <p>Para consultas relacionadas con esta Política de Privacidad, el usuario podrá utilizar los canales de contacto o soporte disponibles a través de la plataforma oficial de distribución de la Aplicación o los medios que el desarrollador ponga a disposición.</p>
+
+        <h2>12. Relación con los Términos y Condiciones</h2>
+        <p>Esta Política de Privacidad debe interpretarse de manera complementaria y consistente con los Términos y Condiciones de la Aplicación.</p>
+        <p>En caso de superposición, complementariedad o interpretación conjunta, ambos textos deberán leerse como parte del mismo marco jurídico y operativo aplicable al uso de la Aplicación.</p>
+
+        <h2>13. Idioma predominante</h2>
+        <p>En caso de cualquier discrepancia, conflicto, diferencia interpretativa, error de traducción, ambigüedad lingüística o inconsistencia entre versiones traducidas de esta Política de Privacidad, la versión redactada en idioma español prevalecerá de manera exclusiva y constituirá la única versión predominante, válida y jurídicamente determinante a efectos interpretativos.</p>
+    </div>
+
+    <!-- ===================== ENGLISH ===================== -->
+    <div id="en" class="section">
+        <h2>1. General Scope</h2>
+        <p>This Privacy Policy describes how the Application handles certain information in relation to its operation, security, operational integrity, and service control.</p>
+        <p>The Application has been designed to prioritize user privacy and local control over files and content, within its technical, operational, and functional limits.</p>
+
+        <h2>2. User Content and Local Storage</h2>
+        <p>Files, data, content, and materials managed through the Application are stored locally on the user’s device, unless the user chooses to move, export, copy, transfer, or share them outside the Application environment.</p>
+        <p>The Application may provide functions that allow the user, among other actions, to:</p>
+        <ul>
+            <li>store files within the Application,</li>
+            <li>move files into or out of the Application,</li>
+            <li>export or copy files to other device locations,</li>
+            <li>import files from external sources,</li>
+            <li>transfer files to other systems, applications, folders, services, or environments accessible from the device.</li>
+        </ul>
+        <p>The user is the sole and exclusive party responsible for any movement, copying, export, transfer, duplication, replacement, overwriting, deletion, or sharing of files carried out through or by means of the Application.</p>
+        <p>Once a file, content, or data is exported, copied, transferred, moved, or shared outside the internal environment of the Application, the Application may no longer retain control, protection, isolation, concealment, or management over such content, depending on the destination, system, environment, or mechanism used by the user.</p>
+
+        <h2>3. Technical, Operational, and Account Data</h2>
+        <p>The Application and/or its associated services, systems, components, or infrastructure may collect, generate, record, process, store, use, correlate, retain, or analyze certain technical, operational, security, account, license, subscription, access, integrity, or functionality-related data to the extent necessary, convenient, or reasonably useful for the operation of the Application, service protection, abuse prevention, fraud prevention, enforcement of limitations, license control, technical diagnostics, security, maintenance, support, internal auditing, operational compliance, service improvement, or developer protection.</p>
+        <p>Such data may include, among other things:</p>
+        <ul>
+            <li>IP address,</li>
+            <li>last known IP address,</li>
+            <li>technical or device identifiers,</li>
+            <li>country or approximate location,</li>
+            <li>registration date,</li>
+            <li>access activity,</li>
+            <li>account status,</li>
+            <li>system events,</li>
+            <li>technical logs,</li>
+            <li>feature usage,</li>
+            <li>license status,</li>
+            <li>subscription status,</li>
+            <li>validation information,</li>
+            <li>as well as other operational or security metadata reasonably related to the functioning of the Application.</li>
+        </ul>
+        <p>This data is used exclusively for operational, functional, security, control, validation, continuity, defense, maintenance, and protection purposes related to the Application and its associated services.</p>
+
+        <h2>4. Content Access, Local Processing, and Limited Technical Views</h2>
+        <p>The Application is not designed for the developer to ordinarily, continuously, or broadly access private content stored by the user within the internal environment of the Application.</p>
+        <p>However, the user acknowledges that certain local operations performed by the Application itself — such as storage, encryption, decryption, concealment, import, export, copying, movement, internal viewing, local indexing, thumbnail generation, previews, functional validation, or deletion — may involve automated technical processing of content within the user’s own device, exclusively to the extent necessary for the execution of the offered functions.</p>
+        <p>Likewise, the user acknowledges and accepts that, in limited, exceptional, and non-routine circumstances, certain partial, technical, or reduced representations of content — including, among others, thumbnails, previews, visual references, associated metadata, processing states, or technical artifacts generated by the system — may become accessible, visible, or usable by the developer or associated systems exclusively for purposes of:</p>
+        <ul>
+            <li>security,</li>
+            <li>diagnostics,</li>
+            <li>technical validation,</li>
+            <li>abuse or fraud prevention,</li>
+            <li>functional verification,</li>
+            <li>internal testing,</li>
+            <li>debugging,</li>
+            <li>error analysis,</li>
+            <li>integrity control,</li>
+            <li>maintenance,</li>
+            <li>technical support,</li>
+            <li>or evaluation and development of current or future features.</li>
+        </ul>
+        <p>Such access, where it exists, does not imply continuous human monitoring, systematic editorial review, commercial exploitation of content, or an ordinary practice generally applied to all users.</p>
+
+        <h2>5. Data Transmission</h2>
+        <p>The Application is not intended for remote storage of the user’s private content as part of its ordinary primary operation.</p>
+        <p>However, certain technical, operational, account, validation, security, license, or subscription data may be transmitted, queried, synchronized, verified, or processed whenever necessary or useful for:</p>
+        <ul>
+            <li>license validation,</li>
+            <li>subscription control,</li>
+            <li>abuse or fraud protection,</li>
+            <li>service integrity,</li>
+            <li>operational verification,</li>
+            <li>technical support,</li>
+            <li>maintenance,</li>
+            <li>security,</li>
+            <li>operation of associated services.</li>
+        </ul>
+
+        <h2>6. Interaction with Third Parties and External Systems</h2>
+        <p>The Application does not sell user data and is not intended to commercialize private content.</p>
+        <p>However, when the user exports, moves, copies, shares, transfers, or makes files or data available outside the Application, such content may become subject to:</p>
+        <ul>
+            <li>other applications,</li>
+            <li>visible system folders,</li>
+            <li>shared storage,</li>
+            <li>third-party services,</li>
+            <li>cloud services,</li>
+            <li>operating system tools,</li>
+            <li>file managers,</li>
+            <li>external systems,</li>
+            <li>or any other environment outside the control of the Application.</li>
+        </ul>
+        <p>In such cases, the processing, exposure, retention, access, indexing, synchronization, analysis, copying, or dissemination of such files or data will no longer depend exclusively on the Application, but also on the destination environment, system, application, or service chosen or permitted by the user.</p>
+
+        <h2>7. User Responsibility</h2>
+        <p>The user is solely responsible for:</p>
+        <ul>
+            <li>managing their files,</li>
+            <li>understanding where their data is stored,</li>
+            <li>verifying whether a file remains protected after being moved or exported,</li>
+            <li>reviewing device permissions, access, or synchronizations,</li>
+            <li>maintaining their own backup and security measures,</li>
+            <li>and assuming the consequences arising from transfers, copies, exports, or external uses of their content.</li>
+        </ul>
+        <p>The developer assumes no responsibility for user decisions related to the location, exposure, duplication, synchronization, sharing, or retention of files outside the internal environment of the Application.</p>
+
+        <h2>8. Security and Technical Limitations</h2>
+        <p>Although the Application may implement security mechanisms, encryption, concealment, validation, logical protection, or other technical measures, no system can guarantee absolute security, total invulnerability, or perfect protection against all possible scenarios.</p>
+        <p>The user acknowledges that their data or files may become compromised, exposed, duplicated, accessible, recoverable, or affected, in whole or in part, due to causes including, among others:</p>
+        <ul>
+            <li>device compromise,</li>
+            <li>unauthorized access,</li>
+            <li>exports or transfers performed by the user,</li>
+            <li>configuration errors,</li>
+            <li>system failures,</li>
+            <li>third-party tools,</li>
+            <li>forensic analysis,</li>
+            <li>external services,</li>
+            <li>automatic synchronization,</li>
+            <li>malware,</li>
+            <li>or circumstances beyond the developer’s reasonable control.</li>
+        </ul>
+
+        <h2>9. Retention and Deletion</h2>
+        <p>The Application may retain certain technical, operational, account, license, security, or validation data for the period reasonably necessary for service operation, integrity control, abuse prevention, support, security, internal auditing, or developer defense.</p>
+        <p>The deletion, uninstallation, export, copying, movement, or removal of files by the user does not necessarily guarantee the absolute deletion of traces, copies, metadata, system records, caches, references, indexes, external backups, or residual artifacts generated by the device, operating system, third parties, or environments external to the Application.</p>
+
+        <h2>10. Modifications</h2>
+        <p>This Privacy Policy may be modified, replaced, updated, expanded, or corrected at any time.</p>
+        <p>The version in force shall be the one applicable from the moment of its publication or availability. Continued use of the Application after any modification shall constitute acceptance of the updated version.</p>
+
+        <h2>11. Contact</h2>
+        <p>For inquiries related to this Privacy Policy, the user may use the contact or support channels available through the official distribution platform of the Application or any means made available by the developer.</p>
+
+        <h2>12. Relationship with the Terms and Conditions</h2>
+        <p>This Privacy Policy must be interpreted in a complementary and consistent manner with the Terms and Conditions of the Application.</p>
+        <p>In case of overlap, complementarity, or joint interpretation, both texts shall be read as part of the same legal and operational framework applicable to the use of the Application.</p>
+
+        <h2>13. Predominant Language</h2>
+        <p>In the event of any discrepancy, conflict, interpretative difference, translation error, linguistic ambiguity, or inconsistency between translated versions of this Privacy Policy, the version drafted in the Spanish language shall exclusively prevail and shall constitute the sole predominant, valid, and legally controlling version for interpretation purposes.</p>
+    </div>
+
+    <div class="footer">
+        © 2026 Secret Folder. All rights reserved.
+    </div>
+</div>
 
 </body>
 </html>
